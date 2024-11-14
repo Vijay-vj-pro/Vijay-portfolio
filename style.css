@@ -1,0 +1,303 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color:rgb(234, 255, 255);
+    line-height: 1.6;
+    padding-top: 100px;
+}
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 30px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0px 100px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#nav-logo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#nav-list{
+    width: 50%;
+    height: 100%;
+}
+#navbar-list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: center;
+}
+#navbar-list li{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom: 3px solid transparent;
+}
+#navbar-list li a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(80, 80, 80);
+}
+#navbar-list li a:hover{
+    color: rgba(255, 91, 91, 0.9);
+    transition: 0.5s ease-in-out;
+}
+#navbar-list li:hover{
+    border-bottom: 3px solid rgb(255, 91, 91,0.9);
+    background-color: rgba(0, 0, 0, 0.034);
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+#Home{
+    width: 100%;
+}
+#Intro-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+#Intro-text{
+    width: 50%;
+    padding: 10px;
+    font-size: 50px;
+    margin: 100px 0px;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#social-media-box{
+    width: 80%;
+    display:flex;
+    padding:0px 0px 0px 40px;
+    margin-bottom: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#social-media-box a{
+    display:flex;
+    justify-content: center;
+}
+.social-media-logo{
+    width:40px;
+    height: 40px;
+}
+#social-media-box h4{
+    font-size: 30px;
+}
+#linkedin-logo:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(0, 110, 255);
+}
+#mail-logo:hover{
+    border-radius: 15%;
+    box-shadow: 0px 0px 20px rgb(0, 106, 228);
+}
+#github-logo:hover{
+    border-radius: 25%;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+#whatsapp-logo:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(0, 212, 0);
+}
+#instagram-logo:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(255, 0, 34);
+}
+#resume-btn{
+    width: fit-content;
+    height: 40px;
+    background-color: rgb(0, 109, 0);
+    border-radius: 10px;
+    font-size:large;
+    color: white;
+    text-decoration: none;
+    padding: 10px 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#resume-btn:hover{
+    background-color: rgb(0, 70, 0);
+    box-shadow: 0px 0px 10px 2px rgb(0, 109, 0);
+}
+#resume-btn img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+#Intro-image{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+#Intro-image img{
+    width: 300px;
+    height: 533px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#About{
+    background: rgb(119,12,226);
+    background: linear-gradient(180deg, rgb(208, 12, 226) 0%, rgb(95, 24, 211) 50%, rgb(46, 16, 165) 100%);
+    color:aliceblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:80px;
+}
+#About p{
+    font-size: 12pt;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    padding-bottom: 20px;
+}
+#Education{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px 60px 100px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.185);
+}
+.sub-heading{
+    color: rgb(34, 34, 34);
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+.edu-sub-container{
+    width: 100%;
+    height: 180px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    background-color: white;
+}
+.edu-sub-container:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 5px 0px;
+}
+.edu-logo-box{
+    padding: 30px;
+}
+.edu-content-box{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    align-items: flex-start;
+}
+.edu-content-box p{
+    color:rgb(80, 80, 80);
+}
+.edu-content-box h3{
+    color: midnightblue;
+}
+.edu-content-box h4{
+    color: green;
+}
+.edu-logo{
+    width: 90px;
+    height: 90px;
+}
+#Skills{
+    width: 100%;
+    height: fit-content;
+    background: rgb(26,10,102);
+    background: linear-gradient(180deg,rgb(42, 10, 102) 0%, rgba(13,55,166,1) 80%, rgba(20,98,181,1) 100%);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Skills-container{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.170);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: rgb(4, 61, 167) 3px 3px 6px 0px inset, rgba(0, 62, 197, 0.5) -3px -3px 6px 1px inset;
+}
+.Skills-sub-container{
+    width: 150px;
+    height: 130px;
+    background-color: rgba(8, 6, 26, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(201, 247, 255);
+    margin: 30px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Skills-sub-container img{
+    width: 55px;
+    height: 55px;
+    
+}
+.Skills-sub-container h5{
+    font-size: 14pt;
+    text-align: center;
+    text-wrap:nowrap;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.Skills-sub-container:hover{
+    transition: 300ms;
+    background-color: rgba(1, 0, 3, 0.548);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 5px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
