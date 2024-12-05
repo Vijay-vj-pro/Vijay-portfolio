@@ -4,14 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Basic Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Raleway", serif;
     color: #333;
     background-color:rgb(234, 255, 255);
     line-height: 1.6;
     padding-top: 100px;
+    overflow-x: hidden ;
 }
 #container{
     width: 100%;
@@ -64,23 +64,15 @@ body {
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     border-bottom: 3px solid transparent;
-}
-#navbar-list li a{
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     color: rgb(80, 80, 80);
 }
-#navbar-list li a:hover{
+#navbar-list li:hover{ 
     color: rgba(255, 91, 91, 0.9);
-    transition: 0.5s ease-in-out;
-}
-#navbar-list li:hover{
     border-bottom: 3px solid rgb(255, 91, 91,0.9);
-    background-color: rgba(0, 0, 0, 0.034);
+    background-color: rgba(197, 197, 197, 0.349);
     cursor: pointer;
-    transition: 300ms ease-in-out;
+    transition: all 300ms linear;
 }
 #Home{
     width: 100%;
@@ -98,6 +90,7 @@ body {
     margin: 100px 0px;
     text-align: end;
     display: flex;
+    font-family: "DM Serif Text", serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -106,7 +99,7 @@ body {
     width: 80%;
     display:flex;
     padding:0px 0px 0px 40px;
-    margin-bottom: 50px;
+    margin:50px;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -144,7 +137,6 @@ body {
 #resume-btn{
     width: fit-content;
     height: 40px;
-    background-color: rgb(0, 109, 0);
     border-radius: 10px;
     font-size:large;
     color: white;
@@ -155,10 +147,26 @@ body {
     align-items: center;
     display: flex;
 }
-#resume-btn:hover{
-    background-color: rgb(0, 70, 0);
-    box-shadow: 0px 0px 10px 2px rgb(0, 109, 0);
+.btn-grad {
+    background-image: linear-gradient(to right, #348F50 0%, #2ecfa7  51%, #348F50  100%)
 }
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 #resume-btn img{
     width: 30px;
     height: 30px;
@@ -176,40 +184,68 @@ body {
     width: 300px;
     height: 533px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(170, 125, 255);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
 }
 #About{
-    background: rgb(119,12,226);
-    background: linear-gradient(180deg, rgb(208, 12, 226) 0%, rgb(95, 24, 211) 50%, rgb(46, 16, 165) 100%);
-    color:aliceblue;
-    width: 100%;
+    background-image: url(Images/1234.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:80px;
+    padding:50px 100px 40px 100px;
 }
 #About p{
-    font-size: 12pt;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14pt;
     text-align: center;
     letter-spacing: 1px;
     word-spacing: 3px;
     padding-bottom: 20px;
 }
+#About p:hover {
+    color: white;
+    mask-image: linear-gradient(120deg, rgba(0,0,0,.6) 40%, rgba(255, 255, 255, 1) 50%, rgba(0,0,0,.6) 60%);
+    mask-size: 200%;
+    animation: shine 2s infinite;
+}
+@keyframes shine {
+    from {
+      mask-position: 150%;
+    }
+    
+    to {
+      mask-position: -50%;
+    }
+}
 #Education{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 30px 100px 60px 100px;
+    padding: 50px 100px 60px 100px;
     text-align: center;
     background-color: rgba(128, 128, 128, 0.185);
 }
+#Education-heading{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
 .sub-heading{
+    font-family: "Baloo Paaji 2", sans-serif;
+    font-weight: 200;
     color: rgb(34, 34, 34);
     font-size: 40px;
-    padding-bottom: 15px;
+    text-align: center;
 }
-.edu-sub-container{
+.edu-sub-container {
     width: 100%;
     height: 180px;
     margin: 10px;
@@ -217,11 +253,13 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: row;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-    background-color: white;
+    background-color:white;
+    transition: all 300ms linear; 
 }
-.edu-sub-container:hover{
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 5px 0px;
+.edu-sub-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 5px 5px 1px;
 }
 .edu-logo-box{
     padding: 30px;
@@ -255,6 +293,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#Skills-heading{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#Skills-heading img{
+    width: 50px;
+    margin: 0px 0px 5px 5px;
 }
 #Skills-container{
     width: 80%;
@@ -300,4 +350,268 @@ body {
     transition: 300ms;
     background-color: rgba(1, 0, 3, 0.548);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 5px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#Projects{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background-image: url(Images/Adobe5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#Projects-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#project-container{
+    width: 100%;
+    padding:  50px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.103);
+    backdrop-filter:blur(10px);
+    border-radius: 20px;
+    border: 1px rgba(255, 255, 255, 0.301) solid;
+}
+.project-box{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: grey;
+    background-image: url(Images/project2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px rgba(255, 255, 255, 0.597) solid;
+}
+.project-hover-box{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.project-hover-box:hover{
+    background-color: rgba(131, 131, 131, 0.082);
+    backdrop-filter: blur(15px);
+}
+.project-name{
+    width:200px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    font-family: "Raleway", serif;
+    font-size: 12pt;
+    font-weight: 300;
+    border: 2px solid white;
+    transition: background-image 0.5s, background-position 0.5s;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.project-name:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(135,175,235)0%, rgb(60, 27, 179)50%,rgb(135, 175, 235)100%);
+    background-size: 200% auto;
+    background-position: right center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+#Certifications{
+    width: 100%;
+    height: fit-content;
+    background-image: url(Images/Adobe6.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment:fixed;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Certifications-heading{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Certifications-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 50px 150px 0px 150px;
+}
+.Certificate-box-left{
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    z-index: 2;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+}
+.Certificate-box-left img{
+    width: 100%;
+    display: flex;
+}
+.Certificate-box-right{
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    z-index: 2;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+}
+.Certificate-box-right img{
+    width: 100%;
+    display: flex;
+}
+#Contact{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(224,241,253);
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+#Email-container{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+#Email-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#Email-container-heading{
+    width: 80%;
+    color: rgb(64,85,104);
+    font-family: "DM serif text";
+    font-size: 30px;
+}
+.Email-container-subheading{
+    font-size: 20px;
+    color: green;
+}
+#Email-container input{
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family:"Raleway", serif;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    color: rgb(64,85,104);
+    background-color: rgb(207,227,242);
+}
+#Email-container input::placeholder{
+    color: rgb(64,85,104);
+}
+#Email-container input:hover, #Email-container input:focus{
+    background-color: rgb(194, 216, 233);
+}
+#Email-container textarea{
+    width: 80%;
+    height: 150px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    color: rgb(64,85,104);
+    background-color: rgb(207,227,242);
+    font-family:"Raleway", serif;
+}
+#Email-container textarea::placeholder{
+    color: rgb(64,85,104);
+}
+#Email-container textarea:hover, #Email-container textarea:focus{
+    background-color: rgb(194, 216, 233);
+}
+#Email-container-button{
+    width: 80%;
+    height: 40px;
+    border-radius: 25px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(126,186,247);
+    font-family: "Baloo Paaji 2", serif;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#Email-container-button:hover{
+    background-color: rgb(101, 163, 224);
+}
+#Contacts-bg{
+    width: 50%;
+}
+#Contacts-bg img{
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+#Contact-details-container{
+    width: 100%;
+    height: 500px;
+    padding: 20px 50px 20px 50px;
+}
+#Contacts-details-subcontainer-1{
+    width: 30%;
+}
+#scroll-up-btn{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+}
+#scroll-up-img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#scroll-up-img:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 54px 55px, rgba(0, 0, 0, 0.22) 0px -12px 30px, rgba(0, 0, 0, 0.22) 0px 4px 6px, rgba(0, 0, 0, 0.27) 0px 12px 13px, rgba(0, 0, 0, 0.20) 0px -3px 5px;
 }
