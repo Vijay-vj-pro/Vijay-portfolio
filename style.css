@@ -11,7 +11,7 @@ body {
     background-color:rgb(234, 255, 255);
     line-height: 1.6;
     padding-top: 100px;
-    overflow-x: hidden ;
+    overflow-x: hidden;
 }
 #container{
     width: 100%;
@@ -500,17 +500,17 @@ body {
 }
 #Contact{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background-color: rgb(224,241,253);
     display: flex;
     flex-direction: column;
-    padding: 100px;
 }
 #Email-container{
     width: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
+    margin: 50px;
 }
 #Email-form{
     width: 50%;
@@ -582,6 +582,7 @@ body {
 }
 #Contacts-bg{
     width: 50%;
+    margin: 50px;
 }
 #Contacts-bg img{
     width: 100%;
@@ -590,28 +591,64 @@ body {
 }
 #Contact-details-container{
     width: 100%;
-    height: 500px;
-    padding: 20px 50px 20px 50px;
+    height: fit-content;
+    padding: 10px 50px 50px 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: black;
 }
-#Contacts-details-subcontainer-1{
+.Contact-details-subcontainer{
     width: 30%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 20px;
+}
+#Contact-one{
+    width: 30%;
     color: white;
 }
-
-#Contacts-details-subcontainer-2{
+#Contact-two{
     width: 30%;
-    display: flex;
+    color: white;
+}
+#Contact-two li{
+    width: fit-content;
+    margin: 5px;
+    list-style: square;
     flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    text-indent: 5px;
+}
+#Contact-three{
+    width: 30%;
+    color: white;
+}
+#Contact-section-logos{
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#Contact-section-logos a{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: white;
+    border-radius: 50%;
+}
+#Contact-section-logos img{
+    width: 100%;
 }
 #scroll-up-btn{
     display: flex;
