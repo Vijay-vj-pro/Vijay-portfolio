@@ -469,7 +469,8 @@ body {
     padding: 50px 150px 0px 150px;
 }
 .Certificate-box-left{
-    width: 45%;
+    width: 380px;
+    height: 300px;
     display: flex;
     padding: 20px;
     margin: 20px;
@@ -484,7 +485,8 @@ body {
     display: flex;
 }
 .Certificate-box-right{
-    width: 45%;
+    width: 380px;
+    height: 300px;
     display: flex;
     padding: 20px;
     margin: 20px;
@@ -649,6 +651,14 @@ body {
 }
 #Contact-section-logos img{
     width: 100%;
+}
+#bottom-tag-line{
+    width: 100%;
+    font-family: "raleway", serif;
+    font-weight: 300;
+    color: white;
+    background-color: black;
+    text-align: center;
 }
 #scroll-up-btn{
     display: flex;
