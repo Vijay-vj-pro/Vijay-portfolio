@@ -55,3 +55,34 @@ function scrollToCertifications(){
 function scrollToContact(){
     document.getElementById("Contact").scrollIntoView({ behavior: "smooth", block: "start" })
 }
+// Function to send emails in contacts section
+
+function sendEmail(){
+const nameField = document.getElementById('Name-field').value;
+const emailField = document.getElementById('Email-field').value;
+const messageField = document.getElementById('Message-field').value;
+console.log(nameField);
+
+(function() {
+    emailjs.init("pTTDULpc8deNaOo9s"); //please encrypted user id for malicious attacks
+  })();
+
+  var templateParams = {
+    from_name: nameField,
+    email: emailField,
+    message: messageField
+  };
+
+  emailjs.send("service_x9ms1t9","template_mx0rjnb", templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+
+}
+
+function refreshThePage(){
+    window.location.reload();
+    console.log('refreshed successfully');
+}

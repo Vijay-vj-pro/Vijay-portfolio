@@ -11,11 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=DM+Serif+Text:ital@0;1&family=Fredericka+the+Great&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
     <div id="container">
         <div id="nav">
+            <img id="logo" src="Images/Portfolio-logo.png" onclick="refreshThePage()"/>
             <div id="nav-logo">
                 <H1>Vijay's Portfolio</H1>
             </div>
@@ -50,11 +52,11 @@
                             src="Images/linkedin-logo1.png"></a>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1500">
-                    <a href="https://github.com" target="_blank"><img class="social-media-logo" id="github-logo"
+                    <a href="https://github.com/Vijay-vj-pro/" target="_blank"><img class="social-media-logo" id="github-logo"
                             src="Images/github-logo1.png"></a>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1500">
-                    <a href="mailto:vijaysveera145@gmail.com&subject=Message from portfolio" target="_blank"><img
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank"><img
                             class="social-media-logo" id="mail-logo" src="Images/mail-logo1.png"></a>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1500">
@@ -284,7 +286,7 @@
                     <input type="text" id="Name-field" placeholder="What's your name ?"></input>
                     <input type="email" id="Email-field" placeholder="Enter your email please"></input>
                     <textarea id="Message-field" placeholder="Your feedbacks here..."></textarea>
-                    <button id="Email-container-button" type="button">Submit</button>
+                    <button id="Email-container-button" type="button" onclick="sendEmail() ">Submit</button>
                 </form>
                 <div id="Contacts-bg">
                     <img src="Images/Contacts-bg.png">
@@ -310,12 +312,12 @@
                 <div class="Contact-details-subcontainer" id="Contact-three">
                     <h2>Contact Info</h2>
                     <h5>+91 9894185597</h5>
-                    <h5><a href="mailto:vijaysveera145@gmail.com&subject=Message from portfolio" target="_blank" style="color: white; text-decoration: none;">vijaysveera145@gmail.com</a></h5>
+                    <h5><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank" style="color: white; text-decoration: none;">vijaysveera145@gmail.com</a></h5>
                     <h5>Madurai, TamilNadu-625016.</h5>
                     <div id="Contact-section-logos">
                         <a href="https://www.linkedin.com" target="_blank"><img src="Images/Contacts section/linkedin.png" /></a>
                         <a href="https://github.com" target="_blank"><img src="Images/Contacts section/github.png" /></a>
-                        <a href="mailto:vijaysveera145@gmail.com&subject=Message from portfolio" target="_blank"><img src="Images/Contacts section/mail.png" /></a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank"><img src="Images/Contacts section/mail.png" alt="Email Icon" /></a>
                         <a href="https://wa.me/+919894185597" target="_blank"><img src="Images/Contacts section/whatsapp.png" /></a>
                         <a href="https://www.instagram.com/vijay05__veera03" target="_blank" ><img src="Images/Contacts section/instagram.png" /></a>
                     </div>
