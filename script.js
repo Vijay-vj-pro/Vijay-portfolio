@@ -1,5 +1,8 @@
-console.log("JavaScript file connected successfully!");
-
+console.log('JavaScript file connected successfully!');
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+  });
+  
 function showBgImage(){   
     document.getElementById("vj-img").src = "Images/color.png";
 }
@@ -12,13 +15,15 @@ function showHoverBox(hoverBox) {
 function hideHoverBox(hoverBox) {
     hoverBox.style.display = "none"; // Hide the hover box
 }
-function showProjectName(projectName) {
-    projectName.innerHTML = "View Project 👀";
+if(window.matchMedia("(min-width: 768px)").matches){
+    
+    function showProjectName(projectName) {
+        projectName.innerHTML = "View Project 👀";
+    }
+    function hideProjectName(projectName) {
+        projectName.innerHTML = projectName.getAttribute("data-original-text");
+    }
 }
-function hideProjectName(projectName) {
-    projectName.innerHTML = projectName.getAttribute("data-original-text");
-}
-
 // Show or hide the button based on scroll position
 const scrollUpButton = document.getElementById("scroll-up-btn");
 window.onscroll = function () {
@@ -84,5 +89,19 @@ console.log(nameField);
 
 function refreshThePage(){
     window.location.reload();
-    console.log('refreshed successfully');
 }
+
+function showNavbar(){
+    document.getElementById('nav-list').style.display = "flex";
+}
+
+function closeNavbar(){
+    document.getElementById('nav-list').style.display = "none";
+}
+
+setInterval(() => {
+    document.getElementById('heart').innerText = "🖤";
+    setTimeout(() => {
+        document.getElementById('heart').innerText = "🤍";
+    }, 500);
+}, 5000);

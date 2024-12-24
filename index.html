@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijay's Portfolio</title>
-    <link rel="icon" href="Images/bw.png" type="image/icon type">
+    <link rel="icon" href="Images/Portfolio-tab-logo.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=DM+Serif+Text:ital@0;1&family=Fredericka+the+Great&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
@@ -23,6 +23,7 @@
             </div>
             <div id="nav-list">
                 <ul id="navbar-list">
+                    <li id="navbar-close-icon-li"><img id="navbar-close-icon" src="Images/close.png" onclick="closeNavbar()"/></li>
                     <li onclick="scrollToHome()">Home</li>
                     <li onclick="scrollToAbout()">About</li>
                     <li onclick="scrollToEducation()">Education</li>
@@ -32,13 +33,14 @@
                     <li onclick="scrollToContact()">Contact</li>
                 </ul>
             </div>
+            <img id="navbar-list-icon" src="Images/menu.png" onclick="showNavbar()"/>
         </div>
         <div id="Home">
             <div id="Intro-box">
                 <div id="Intro-text">
                     <h1>Hello There
                         I'm <span style="font-family: 'Fredericka the Great', sans-serif; font-weight: 400;">Vijay</span></h1>
-                        <img id="wrong" src="Images/scratch.png" style="position:relative; bottom: 50px; left: 220px ; display: inline; width: 300px;"  />
+                        <img id="wrong" src="Images/scratch.png" />
                 </div>
                 <div id="Intro-image" data-aos="fade-left" data-aos-duration="2000">
                     <img onmousemove="showBgImage()" onmouseleave="hideBgImage()" id="vj-img" src="Images/bw.png">
@@ -46,41 +48,41 @@
                 
             </div>
             <div id="social-media-box">
-                <h4 data-aos="fade-right" data-aos-duration="1500">Reach me 👉🏻</h4>
-                <div data-aos="zoom-in" data-aos-duration="1500">
-                    <a href="https://www.linkedin.com" target="_blank"><img class="social-media-logo" id="linkedin-logo"
+                <h4 data-aos="fade-right" data-aos-duration="500">Reach me 👉🏻</h4>
+                <div class="social-media-class" data-aos="fade-up" data-aos-duration="500">
+                    <a href="https://www.linkedin.com/in/vijaysankar2005" target="_blank"><img class="social-media-logo" id="linkedin-logo"
                             src="Images/linkedin-logo1.png"></a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1500">
+                <div class="social-media-class" data-aos="fade-up" data-aos-duration="500">
                     <a href="https://github.com/Vijay-vj-pro/" target="_blank"><img class="social-media-logo" id="github-logo"
                             src="Images/github-logo1.png"></a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1500">
+                <div class="social-media-class" data-aos="fade-up" data-aos-duration="500">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank"><img
                             class="social-media-logo" id="mail-logo" src="Images/mail-logo1.png"></a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1500">
+                <div class="social-media-class" data-aos="fade-up" data-aos-duration="500">
                     <a href="https://wa.me/+919894185597" target="_blank"><img class="social-media-logo"
                             id="whatsapp-logo" src="Images/whatsapp-logo1.png"></a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1500"><a href="https://www.instagram.com/vijay05__veera03"
+                <div class="social-media-class" data-aos="fade-up" data-aos-duration="500"><a href="https://www.instagram.com/vijay05__veera03"
                         target="_blank"><img class="social-media-logo" id="instagram-logo"
                             src="Images/instagram-logo1.png"></a>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1500">
+                <div id="resume-div" data-aos="fade-left" data-aos-duration="500">
                     <a href="https://drive.google.com/file/d/1SPEMWoq8zevmiWDnxyAwSnHHo_GEZhdn/view?usp=drivesdk"
-                        id="resume-btn" class="btn-grad">View my resume<img src="Images/right-icon.png"
+                        id="resume-btn" class="btn-grad">VIEW MY RESUME<img src="Images/right-icon.png"
                             alt="circled-chevron-right" />
                     </a>
                 </div>
             </div>
         </div>
         <div id="About">
-            <h2 class="sub-heading" data-aos="zoom-out-up" aos data-aos-duration="1500"
+            <h2 class="sub-heading" data-aos="zoom-out-up" aos data-aos-duration="500"
                 style="font-weight: 600; color: white; text-shadow: 1px 1px rgb(212, 0, 0);">About <span
                     style="color: rgb(234, 238, 0); text-shadow: 1px 1px rgb(212, 0, 0);">Me</span></h2>
 
-            <p data-aos="zoom-in-up" data-aos-duration="2000">
+            <p data-aos="zoom-in-up" data-aos-offset="0" data-aos-duration="2000">
                 I am Vijay, currently pursuing a Bachelors' degree in Computer Science with Cognitive Systems at
                 Thiagarajar College of Arts and Science, Madurai. Throughout my academic journey, I have honed skills in
                 programming languages such as Java, Python, and C, along with web development technologies like HTML,
@@ -104,7 +106,7 @@
                         style="color: rgb(120, 0, 233);">Education</span></h2>
                 <img src="Images/Education-logo.png" style="display: inline; width: 50px; margin: 5px 0px 0px 10px;" />
             </div>
-            <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" id="sslc"
+            <div data-aos="fade-up" data-aos-duration="300" data-aos-offset="100" data-aos-easing="ease-in-sine" id="sslc"
                 class="edu-sub-container">
                 <div class="edu-logo-box">
                     <img class="edu-logo" src="Images/edu_logo.jpg">
@@ -113,16 +115,16 @@
                     <H2>BACHELORS</H2>
                     <H3>Thiagarajar College of Arts and Science</H3>
                     <p>B.Sc., Computer Science in Cognitive Systems</p>
-                    <p>Scored 71.49% in Bachelors degree</p>
+                    <p>Scored 73.12% in Bachelors degree</p>
                     <h4>2022 - 2025 | Pursuing</h4>
                 </div>
 
             </div>
 
-            <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" id="hsc"
+            <div data-aos="fade-up" data-aos-duration="300" data-aos-offset="100" data-aos-easing="ease-in-sine" id="hsc"
                 class="edu-sub-container">
                 <div class="edu-logo-box">
-                    <img class="edu-logo" src="Images/edu_logo.jpg">
+                    <img class="edu-logo" src="Images/schl-logo.png">
                 </div>
                 <div class="edu-content-box">
                     <H2>HSC</H2>
@@ -131,10 +133,10 @@
                     <h4>2021 - 2022 | Completed</h4>
                 </div>
             </div>
-            <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" id="college"
+            <div data-aos="fade-up" data-aos-duration="300" data-aos-offset="100" data-aos-easing="ease-in-sine" id="college"
                 class="edu-sub-container">
                 <div class="edu-logo-box">
-                    <img class="edu-logo" src="Images/edu_logo.jpg">
+                    <img class="edu-logo" src="Images/schl-logo.png">
                 </div>
                 <div class="edu-content-box">
                     <H2>SSLC</H2>
@@ -152,50 +154,50 @@
                 <img src="Images/Skills-logo.png"/>
             </div>
             
-            <div id="Skills-container" data-aos="fade-up" data-aos-offset="300" data-aos-duration="1500">
-                <div class="Skills-sub-container">
+            <div id="Skills-container" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/java-logo.png">
                     <h5>Java</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/python-logo.png">
                     <h5>Python</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/github-logo.png">
                     <h5>Github</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/html-logo.png">
                     <h5>HTML</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/css-logo.png">
                     <h5>CSS</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/javascript-logo.png">
                     <h5>JavaScript</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/gitvcs-logo.png">
                     <h5>VCS</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/c-logo.png">
                     <h5>C</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/bootstrap-logo.png">
                     <h5>Bootstrap</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/aws-logo.png">
                     <h5>AWS</h5>
                 </div>
-                <div class="Skills-sub-container">
+                <div class="Skills-sub-container" data-aos="fade-up" data-aos-duration="500">
                     <img src="Images/Skills logo/sql-logo.png">
-                    <h5>MySQL</h5>
+                    <h5>SQL</h5>
                 </div>
             </div>
         </div>
@@ -207,8 +209,8 @@
                 <img src="Images/Projects-logo.png" style="width: 50px; height: 40px; display: flex; margin-left: 10px ;"
                     alt="projects-logo" />
             </div>
-            <div id="project-container">
-                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="100" class="project-box"
+            <div id="project-container" data-aos="fade-up" data-aos-duration="500" >
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="100" class="project-box"
                     onmouseover="showHoverBox(this.querySelector('.project-hover-box'))"
                     onmouseleave="hideHoverBox(this.querySelector('.project-hover-box'))"
                     style="background-image: url(Images/Library-project3.png);">
@@ -221,7 +223,7 @@
                         </a>
                     </div>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="100" class="project-box"
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="100" class="project-box"
                     onmouseover="showHoverBox(this.querySelector('.project-hover-box'))"
                     onmouseleave="hideHoverBox(this.querySelector('.project-hover-box'))"
                     style="background-image: url(Images/calculator-project.png);">
@@ -234,13 +236,14 @@
                         </a>
                     </div>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="100" class="project-box"
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="100" class="project-box"
                     onmouseover="showHoverBox(this.querySelector('.project-hover-box'))"
-                    onmouseleave="hideHoverBox(this.querySelector('.project-hover-box'))">
+                    onmouseleave="hideHoverBox(this.querySelector('.project-hover-box'))"
+                    style="background-image: url(Images/Cricket-project.png);">
                     <div class="project-hover-box">
-                        <a href="www.google.com" target="_blank" style="text-decoration: none;">
-                            <H3 class="project-name" data-original-text="Project name 3"
-                                onmouseover="showProjectName(this)" onmouseleave="hideProjectName(this)">Project name 3
+                        <a href="https://vijay-vj-pro.github.io/Hand_Cricket_Project/" target="_blank" style="text-decoration: none;">
+                            <H3 class="project-name" data-original-text="Random Runs Cricket"
+                                onmouseover="showProjectName(this)" onmouseleave="hideProjectName(this)">Random Runs Cricket
                             </H3>
                         </a>
                     </div>
@@ -252,36 +255,36 @@
             <div id="Certifications-heading" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="300">
                 <img src="Images/Certifications-logo.png" style="width: 45px; height: 45px; margin-right: 20px;"/>
                 <H2 class="sub-heading"
-                style="color: rgb(233, 39, 5); font-weight: 600;">I'm <span
-                    style="color: rgb(0, 0,47);">Certified </span> in</H2>
+                style="color: rgb(233, 39, 5); font-weight: 600; text-shadow: 1px 1px rgb(0, 0, 49)">I'm <span
+                    style="color: rgb(0, 0,47); text-shadow: 1px 1px rgb(255, 51, 0);">Certified </span> in</H2>
             </div>
             <div id="Certifications-container">
-                <div id="Certificate-1" class="Certificate-box-left" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <a href="https://nptel.ac.in/noc/E_Certificate/NPTEL24CS105S65860026303845948" target="_blank"><img src="Images/Certificates/Programming in Java.png" /></a>
+                <div id="Certificate-1" class="Certificate-box-left" data-aos="fade-up-left" data-aos-duration="500" data-aos-offset="200">
+                    <a href="https://drive.google.com/file/d/1tSctTWrFZ2ZocW5JbExVeliIx_ETYmHy/view?usp=sharing" target="_blank"><img src="Images/Certificates/Programming in Java.png" /></a>
                 </div>
-                <div id="Certificate-2" class="Certificate-box-right" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="Certificate-2" class="Certificate-box-right" data-aos="fade-up-right" data-aos-duration="500" data-aos-offset="200">
                     <a href="https://coursera.org/verify/professional-cert/VGL5M4575IMY" target="_blank"><img src="Images/Certificates/Meta Back-End Developer.jpeg" /></a>
                 </div>
-                <div id="Certificate-3" class="Certificate-box-left" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="Certificate-3" class="Certificate-box-left" data-aos="fade-up-left" data-aos-duration="500" data-aos-offset="200">
                     <a href="https://coursera.org/verify/Y7Q3HPHE6DEN" target="_blank"><img src="Images/Certificates/Programming in Python.jpeg" /></a>
                 </div>
-                <div id="Certificate-4" class="Certificate-box-right" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="Certificate-4" class="Certificate-box-right" data-aos="fade-up-right" data-aos-duration="500" data-aos-offset="200">
                     <a href="https://coursera.org/verify/V9JLUWZCHZ05" target="_blank" ><img src="Images/Certificates/Version Control.jpeg" /></a>
                 </div>
-                <div id="Certificate-5" class="Certificate-box-left" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300"data-aos-easing="ease-in-sine">
-                    <a href="#" target="_blank"><img src="Images/Certificates/Java Basics.png" /></a>
+                <div id="Certificate-5" class="Certificate-box-left" data-aos="fade-up-left" data-aos-duration="500" data-aos-offset="200">
+                    <a href="https://www.hackerrank.com/certificates/48f1c8caf86b" target="_blank"><img src="Images/Certificates/Java Basics.png" /></a>
                 </div>
-                <div id="Certificate-6" class="Certificate-box-right" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="Certificate-6" class="Certificate-box-right" data-aos="fade-up-right" data-aos-duration="500" data-aos-offset="200">
                     <a href="https://coursera.org/verify/X4F4ZKG8MS9M" target="_blank"><img src="Images/Certificates/Introduction to Front-End Development.jpeg" /></a>
                 </div>
-                <div id="Certificate-7" class="Certificate-box-left" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="Certificate-7" class="Certificate-box-left" data-aos="fade-up-left" data-aos-duration="500" data-aos-offset="200">
                     <a href="#" target="_blank"><img src="Images/Certificates/Programming with JavaScript.jpeg" /></a>
                 </div>
             </div>
         </div>
         <div id="Contact">
             <div id="Email-container">
-                <form id="Email-form">
+                <form id="Email-form" data-aos="slide-right" data-aos-duration="500" data-aos-offset="300"> 
                     <label id="Email-container-heading">Tell me something...</label>
                     <input type="text" id="Name-field" placeholder="What's your name ?"></input>
                     <input type="email" id="Email-field" placeholder="Enter your email please"></input>
@@ -315,24 +318,26 @@
                     <h5><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank" style="color: white; text-decoration: none;">vijaysveera145@gmail.com</a></h5>
                     <h5>Madurai, TamilNadu-625016.</h5>
                     <div id="Contact-section-logos">
-                        <a href="https://www.linkedin.com" target="_blank"><img src="Images/Contacts section/linkedin.png" /></a>
-                        <a href="https://github.com" target="_blank"><img src="Images/Contacts section/github.png" /></a>
+                        <a href="https://www.linkedin.com/in/vijaysankar2005" target="_blank"><img src="Images/Contacts section/linkedin.png" /></a>
+                        <a href="https://github.com/Vijay-vj-pro/" target="_blank"><img src="Images/Contacts section/github.png" /></a>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijaysveera145@gmail.com&su=Message%20from%20portfolio" target="_blank"><img src="Images/Contacts section/mail.png" alt="Email Icon" /></a>
                         <a href="https://wa.me/+919894185597" target="_blank"><img src="Images/Contacts section/whatsapp.png" /></a>
                         <a href="https://www.instagram.com/vijay05__veera03" target="_blank" ><img src="Images/Contacts section/instagram.png" /></a>
                     </div>
                 </div>
             </div>
-            <h5 id="bottom-tag-line" >Made with ❤ by Vijay</h5>
+            <h5 id="bottom-tag-line" style="padding: 5px 0px 5px 0px">Made with <span id="heart">🤍</span> by Vijay</h5>
         </div>
         <div id="scroll-up-btn">
             <img onclick="scrollUp()" id="scroll-up-img" src="Images/up-icon2.png"/>
         </div>
     </div>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init({
+        disable: 'mobile'
+      });
     </script>
 </body>
 </html>
